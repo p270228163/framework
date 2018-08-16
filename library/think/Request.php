@@ -1636,7 +1636,7 @@ class Request
         $type      = $type ? 1 : 0;
         static $ip = null;
 
-        if (null !== $ip) {
+        if (isset($ip[$type])) {
             return $ip[$type];
         }
 
